@@ -196,6 +196,7 @@ rclcpp_components_register_nodes(map_and_localization_slam_toolbox "slam_toolbox
 #### Install
 install(TARGETS async_slam_toolbox_node
                 sync_slam_toolbox_node
+                lifelong_slam_toolbox_node
                 localization_slam_toolbox_node
                 map_and_localization_slam_toolbox_node
                 merge_maps_kinematic
@@ -220,7 +221,6 @@ install(DIRECTORY include/
 
 install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME}
-  PATTERN "lifelong_launch.py" EXCLUDE
 )
 
 install(DIRECTORY config
